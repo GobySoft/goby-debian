@@ -1,0 +1,34 @@
+This work was packaged for Debian by:
+
+    Toby Schneider <tes.aubergine@gmail.com> on Mon, 07 Mar 2011 20:01:02 -0500
+
+It was downloaded from:
+
+    https://launchpad.net/goby
+
+Upstream Author(s):
+
+    Goby Developers: https://launchpad.net/~goby-dev
+    Lead: Toby Schneider <tes.aubergine@gmail.com>
+
+Copyright:
+    - All files:
+    Copyright (C) 2009 - 2011 Toby Schneider <tes.aubergine@gmail.com>
+
+    - goby/src/util/liblinebasedcomms/nmea_sentence.h
+    - goby/src/util/liblinebasedcomms/nmea_sentence.cpp
+        are also 
+     Copyright (C) 2010 c. murphy cmurphy@whoi.edu
+
+License:
+
+    Goby is licensed under the GPL version 3,
+    see "/usr/share/common-licenses/GPL-3".    
+
+The Debian packaging is:
+
+    Copyright (C) 2011 Toby Schneider <tes.aubergine@gmail.com>
+
+and is licensed under the GPL version 3,
+see "/usr/share/common-licenses/GPL-3".
+

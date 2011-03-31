@@ -1,0 +1,20 @@
+goby (1.0.2b-1gobydev1~maverick1) maverick; urgency=low
+  * New upstream version
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 31 Mar 2011 12:29:00 -0500
+
+goby (1.0.1-1gobydev3~maverick1) maverick; urgency=low
+  * Fixed missing Depends in libgoby1-dev
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 31 Mar 2011 12:11:00 -0500
+	
+goby (1.0.1-1gobydev2~maverick1) maverick; urgency=low
+  * Fixed definition in version.h that must be explicitly defined
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 08 Mar 2011 13:06:54 -0500
+
+goby (1.0.1-1gobydev1~maverick1) maverick; urgency=low
+  * Initial release for Ubuntu PPA
+  * Fixed missing dependencies for many of the libraries
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 07 Mar 2011 20:01:02 -0500
