@@ -1,7 +1,7 @@
 Source: goby
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwtdbo-dev, libwtdbosqlite-dev, moos
+Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwtdbo-dev, libwtdbosqlite-dev, moos (<= 0.2300+)
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
@@ -50,7 +50,7 @@ Description: Binaries for the Goby Underwater Autonomy Project
 
 
 Package: goby1-moos
-Depends: ${shlibs:Depends}, ${misc:Depends}, moos
+Depends: ${shlibs:Depends}, ${misc:Depends}, moos (<= 0.2300+)
 Recommends: socat
 Section: science
 Architecture: any

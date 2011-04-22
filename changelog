@@ -1,3 +1,8 @@
+goby (1.0.2b-1gobydev2~maverick1) maverick; urgency=low
+  * Updated dependency on MOOS to explicity restrict > 0.2300
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 21 Apr 2011 18:35:00 -0500
+
 goby (1.0.2b-1gobydev1~maverick1) maverick; urgency=low
   * New upstream version
 
