@@ -1,7 +1,7 @@
 Source: goby
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwtdbo-dev, libwtdbosqlite-dev, moos (<= 0.2300+), libzmq-dev (>= 2.1), graphviz, doxygen, texlive-xetex, ttf-sil-gentium, imagemagick, texlive-fonts-recommended, texlive-font-utils, ghostscript, lmodern, texlive-latex-recommended
+Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwtdbo-dev, libwtdbosqlite-dev, moos (<= 0.2300+), libzmq-dev (>= 2.1), graphviz, doxygen, texlive-xetex, ttf-sil-gentium, imagemagick, texlive-fonts-recommended, texlive-font-utils, ghostscript, lmodern, texlive-latex-recommended, texlive-latex-extra
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby

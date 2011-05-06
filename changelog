@@ -1,4 +1,4 @@
-goby (2.0.0~PRE-RELEASE-0gobydev1~natty1) natty; urgency=low
+goby (2.0.0~PRE-RELEASE-0gobydev1~lucid1) lucid; urgency=low
 
   * Initial package for release 2.0 to allow daily recipe builds on Launchpad
 
