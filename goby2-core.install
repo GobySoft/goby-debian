@@ -1,2 +1,2 @@
-/usr/bin/goby_database
-/usr/bin/goby_db_to_alog
+#/usr/bin/goby_database
+#/usr/bin/goby_db_to_alog

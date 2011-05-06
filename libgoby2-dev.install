@@ -1,3 +1,4 @@
 usr/include/*
 usr/lib/lib*.so
 usr/share/goby/examples
+usr/share/goby/cfg/test

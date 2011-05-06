@@ -1,4 +1,5 @@
-/usr/bin/iCommander
-/usr/bin/pAcommsHandler
-/usr/bin/pREMUSCodec
-/usr/bin/moos_gateway_g
+#/usr/bin/iCommander
+#/usr/bin/pAcommsHandler
+#/usr/bin/pREMUSCodec
+#/usr/bin/moos_gateway_g
+usr/share/goby/cfg/MOOS
