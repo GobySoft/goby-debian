@@ -1,3 +1,9 @@
+goby (2.0.0~PRE-RELEASE-0gobydev1~natty1) natty; urgency=low
+
+  * Initial package for release 2.0 to allow daily recipe builds on Launchpad
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 06 May 2011 00:00:11 -0400
+
 goby (1.0.3-0gobydev1~lucid1) lucid; urgency=low
 
   * Same upstream 1.0.3 but for lucid

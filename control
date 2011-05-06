@@ -1,19 +1,19 @@
 Source: goby
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwtdbo-dev, libwtdbosqlite-dev, moos (<= 0.2300+)
+Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwtdbo-dev, libwtdbosqlite-dev, moos (<= 0.2300+), libzmq-dev (>= 2.1), graphviz, doxygen, texlive-xetex, ttf-sil-gentium, imagemagick
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
 #Vcs-Git: git://git.debian.org/collab-maint/goby.git
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/goby.git;a=summary
 
-Package: libgoby1-dev
+Package: libgoby2-dev
 Provides: libgoby-dev
-Conflicts: libgoby-dev
+Conflicts: libgoby-dev, libgoby1-dev
 Section: libdevel
 Architecture: any
-Depends: libgoby1 (= ${binary:Version}),
+Depends: libgoby2 (= ${binary:Version}),
          libboost-dev (>= 1.36), 
          libboost-system-dev (>= 1.36), 
          libboost-date-time-dev (>= 1.36), 
@@ -28,18 +28,21 @@ Depends: libgoby1 (= ${binary:Version}),
          libprotobuf-dev,
          libwt-dev (>= 3.1),
          libwtdbo-dev,
-         libwtdbosqlite-dev
+         libwtdbosqlite-dev,
+         libzmq-dev (>= 2.1)
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
-Package: libgoby1
+Package: libgoby2
+Conflicts: libgoby1
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
-Package: goby1-core
+Package: goby2-core
+Conflicts: goby1-core
 Recommends: sqliteman
 Section: science
 Architecture: any
@@ -49,7 +52,8 @@ Description: Binaries for the Goby Underwater Autonomy Project
   This package provides applications used for running the Goby autonomy architecture (middleware)
 
 
-Package: goby1-moos
+Package: goby2-moos
+Conflicts: goby1-moos
 Depends: ${shlibs:Depends}, ${misc:Depends}, moos (<= 0.2300+)
 Recommends: socat
 Section: science
@@ -58,3 +62,10 @@ Description: MOOS Binaries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides applications for the MOOS Middleware (http://www.robots.ox.ac.uk/~mobile/MOOS/wiki/pmwiki.php)
 
+Package: goby2-doc
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: doc
+Architecture: all
+Description: Documentation for the Goby Underwater Autonomy Project
+  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides Doxygen and Latex PDF user and developers' documentation.
