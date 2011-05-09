@@ -1,3 +1,9 @@
+goby2 (2.0.0~PRE-RELEASE-0gobydev1~lucid1) lucid; urgency=low
+
+  * Changed source package name to "goby2" to avoid conflicting with "goby" (v1)
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 09 May 2011 11:28:00 -0400
+
 goby (2.0.0~PRE-RELEASE-0gobydev1~lucid1) lucid; urgency=low
 
   * Initial package for release 2.0 to allow daily recipe builds on Launchpad
