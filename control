@@ -1,7 +1,34 @@
 Source: goby2
 Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
-Build-Depends: cdbs, debhelper (>= 7.0.50~), cmake, libboost-dev (>= 1.36), libxerces-c-dev, libcrypto++-dev, libncurses-dev, libprotobuf-dev, libprotoc-dev, protobuf-compiler, libcdk5-dev, libwt-dev (>= 3.1), libwthttp-dev, libwtdbo-dev, libwtdbosqlite-dev, moos (<= 0.2300+), libzmq-dev (>= 2.1), graphviz, doxygen, texlive-xetex, ttf-sil-gentium, imagemagick, texlive-fonts-recommended, texlive-font-utils, ghostscript, lmodern, texlive-latex-recommended, texlive-latex-extra
+Build-Depends: cdbs,
+               debhelper (>= 7.0.50~),
+               cmake, 
+               libboost-dev (>= 1.36), 
+               libxerces-c-dev, 
+               libcrypto++-dev, 
+               libncurses-dev, 
+               libprotobuf-dev, 
+               libprotoc-dev, 
+               protobuf-compiler, 
+               libcdk5-dev, 
+               libwt-dev (>= 3.1), 
+               libwthttp-dev, 
+               libwtdbo-dev, 
+               libwtdbosqlite-dev, 
+               moos (>= 0.2374~), 
+               libzmq-dev (>= 2.1), 
+               graphviz, 
+               doxygen, 
+               texlive-xetex, 
+               ttf-sil-gentium, 
+               imagemagick, 
+               texlive-fonts-recommended, 
+               texlive-font-utils, 
+               ghostscript, 
+               lmodern, 
+               texlive-latex-recommended, 
+               texlive-latex-extra
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
@@ -56,7 +83,7 @@ Description: Binaries for the Goby Underwater Autonomy Project
 
 Package: goby2-moos
 Conflicts: goby1-moos
-Depends: ${shlibs:Depends}, ${misc:Depends}, moos (<= 0.2300+)
+Depends: ${shlibs:Depends}, ${misc:Depends}, moos (>= 0.2374~)
 Recommends: socat
 Section: science
 Architecture: any
