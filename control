@@ -12,12 +12,7 @@ Build-Depends: cdbs,
                libprotoc-dev, 
                protobuf-compiler, 
                libcdk5-dev, 
-               libwt-dev (>= 3.1), 
-               libwthttp-dev, 
-               libwtdbo-dev, 
-               libwtdbosqlite-dev, 
                moos (>= 0.2374~), 
-               libzmq-dev (>= 2.1), 
                graphviz, 
                doxygen, 
                texlive-xetex, 
@@ -54,11 +49,6 @@ Depends: libgoby2 (= ${binary:Version}),
          libncurses-dev,
          libprotobuf-dev, 
          libprotoc-dev,
-         libwt-dev (>= 3.1),
-         libwtdbo-dev,
-         libwthttp-dev,
-         libwtdbosqlite-dev,
-         libzmq-dev (>= 2.1)
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
@@ -69,17 +59,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
-
-Package: goby2-core
-Conflicts: goby1-core
-Recommends: sqliteman
-Section: science
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Binaries for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
-  This package provides applications used for running the Goby autonomy architecture (middleware)
-
 
 Package: goby2-moos
 Conflicts: goby1-moos
@@ -92,6 +71,7 @@ Description: MOOS Binaries for the Goby Underwater Autonomy Project
   This package provides applications for the MOOS Middleware (http://www.robots.ox.ac.uk/~mobile/MOOS/wiki/pmwiki.php)
 
 Package: goby2-doc
+Conflicts: goby1-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: doc
 Architecture: all
