@@ -1,3 +1,9 @@
+goby2 (2.0.0-beta1-0gobydev1~lucid1) lucid; urgency=low
+
+  * Upstream beta1 release.
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 20 Sep 2011 22:47:30 -0400
+
 goby2 (2.0.0~PRE-RELEASE-0gobydev1~lucid1) lucid; urgency=low
 
   * Changed source package name to "goby2" to avoid conflicting with "goby" (v1)
