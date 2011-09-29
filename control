@@ -29,7 +29,8 @@ Build-Depends: cdbs,
                ghostscript, 
                lmodern, 
                texlive-latex-recommended, 
-               texlive-latex-extra
+               texlive-latex-extra,
+               latex-xcolor
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
