@@ -17,6 +17,11 @@ Build-Depends: cdbs,
                libncurses-dev, 
                libprotobuf-dev, 
                libprotoc-dev, 
+               libzmq-dev,
+               libwt-dev,
+               libwtdbo-dev,
+               libwtdbosqlite-dev,
+               libwthttp-dev,
                protobuf-compiler, 
                moos (>= 0.2374~), 
                graphviz, 
@@ -52,6 +57,11 @@ Depends: libgoby2 (= ${binary:Version}),
          libboost-signals-dev (>= 1.36), 
          libboost-filesystem-dev (>= 1.36), 
          libboost-regex-dev (>= 1.36), 
+         libzmq-dev,
+         libwt-dev,
+         libwtdbo-dev,
+         libwtdbosqlite-dev,
+         libwthttp-dev,
          libxerces-c-dev,
          libcrypto++-dev,
          libncurses-dev,
@@ -77,6 +87,15 @@ Architecture: any
 Description: MOOS Binaries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides applications for the MOOS Middleware (http://www.robots.ox.ac.uk/~mobile/MOOS/wiki/pmwiki.php)
+
+Package: goby2-apps
+Conflicts: goby1-core
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: science
+Architecture: any
+Description: Applications for the Goby Underwater Autonomy Project
+  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides a variety of applications and tools.
 
 Package: goby2-doc
 Conflicts: goby1-doc
