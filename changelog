@@ -1,3 +1,9 @@
+goby2 (2.0.0-beta4-0gobydev1~lucid1) lucid; urgency=low
+
+  * Fourth beta release.
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Wed, 22 Feb 2012 13:00:13 -0500
+
 goby2 (2.0.0-beta2-0gobydev1~oneiric1) oneiric; urgency=low
 
   * Second beta release
