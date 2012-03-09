@@ -98,7 +98,7 @@ Description: Applications for the Goby Underwater Autonomy Project
   This package provides a variety of applications and tools.
 
 Package: goby2-doc
-Conflicts: goby1-doc
+Conflicts: goby1-doc, libgoby1-dev
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: doc
 Architecture: all
