@@ -1,3 +1,9 @@
+goby2 (2.0.1~rc1-0gobydev1~oneiric1) oneiric; urgency=low
+
+  * Release Candidate 1 of 2.0 series.
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 07 May 2012 19:07:09 -0400
+
 goby2 (2.0.0-beta4-0gobydev1~lucid1) lucid; urgency=low
 
   * Fourth beta release.
