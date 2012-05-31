@@ -1,5 +1,5 @@
-usr/bin/goby_liaison
 usr/bin/dccl_xml_to_dccl_proto
-usr/share/goby/liaison
 usr/bin/analyze_dccl
 usr/bin/analyze_dccl_xml
+usr/bin/goby_bridge
+usr/bin/goby_store_server

@@ -99,6 +99,14 @@ Description: Applications for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides a variety of applications and tools.
 
+Package: goby2-gui
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: science
+Architecture: any
+Description: GUI Applications for the Goby Underwater Autonomy Project
+  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides a the Goby GUI applications.
+
 Package: goby2-doc
 Conflicts: goby1-doc, libgoby1-dev
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -107,3 +115,12 @@ Architecture: all
 Description: Documentation for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides Doxygen and Latex PDF user and developers' documentation.
+
+Package: goby2-test
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: science
+Architecture: any
+Description: Unit tests for the Goby Underwater Autonomy Project
+  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides a the Goby unit tests.
+
