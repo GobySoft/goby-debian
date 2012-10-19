@@ -1,4 +1,10 @@
-goby2 (2.0.1~rc4-0gobydev1~lucid1) lucid; urgency=low
+goby2 (2.0.1~rc4-0gobydev2~quantal1) quantal; urgency=low
+
+  * Added texlive-generic-recommended for Quantal
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 19 Oct 2012 10:24:01 -0400
+
+goby2 (2.0.1~rc4-0gobydev1~quantal1) quantal; urgency=low
 
   * Release Candidate 4 of 2.0 series
 
