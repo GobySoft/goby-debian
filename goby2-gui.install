@@ -1,2 +1,3 @@
 usr/share/goby/liaison
 usr/bin/goby_liaison
+usr/lib/libliaison_plugins*.so
