@@ -11,5 +11,10 @@ DEB_BUILD_PARALLEL = true
 
 # workaround ASIO bug in Ubuntu PPA build machines for Boost 1.49/1.50
 ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
-	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_asio=OFF	
+	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_asio=OFF
+endif
+
+# PDF documentation build works on these newer versions of Ubuntu's Doxygen
+ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
+	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
