@@ -1,3 +1,4 @@
 usr/include/*
 usr/lib/libgoby*.so
 usr/share/goby/examples
+usr/bin/abc_modem_simulator
