@@ -1,3 +1,9 @@
+goby2 (2.0.2-0gobydev1~raring1) raring; urgency=low
+
+  * New upstream release 2.0.2
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 28 Feb 2013 13:35:38 -0500
+
 goby2 (2.0.1~rc4-0gobydev2~quantal1) quantal; urgency=low
 
   * Added texlive-generic-recommended for Quantal
