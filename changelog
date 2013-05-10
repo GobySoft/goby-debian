@@ -1,3 +1,9 @@
+goby2 (2.0.3-0gobydev1~raring1) raring; urgency=low
+
+  * Release 2.0.3.
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 10 May 2013 10:35:01 -0400
+
 goby2 (2.0.3~beta1-0gobydev1~raring1) raring; urgency=low
 
   * Release 2.0.3 beta 1.
