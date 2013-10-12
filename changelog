@@ -1,4 +1,4 @@
-goby2 (2.1.0~beta3-0gobydev1~squeeze1) squeeze; urgency=low
+goby2 (2.1.0~beta3-0gobydev1~saucy1) saucy; urgency=low
 
   * Release 2.1.0 beta 3: Tweaks for MAC and Driver
 

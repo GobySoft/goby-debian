@@ -87,7 +87,7 @@ Description: Libraries for the Goby Underwater Autonomy Project
 
 Package: goby2-moos
 Conflicts: goby1-moos
-Depends: ${shlibs:Depends}, ${misc:Depends}, moos (>= 0.2374~)
+Depends: ${shlibs:Depends}, ${misc:Depends}, moosdb10 | moos (>= 0.2374~)
 Recommends: socat
 Section: science
 Architecture: any
