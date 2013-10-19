@@ -14,7 +14,13 @@ ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_asio=OFF
 endif
 
+# bug for Ubuntu PPA Saucy build machines
+ifeq ($(shell (lsb_release -c | egrep -q "saucy") && echo "yes"),yes)
+	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_zmq=OFF
+endif
+
+
 # PDF documentation build works on these newer versions of Ubuntu's Doxygen
-ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
+ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring|saucy") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
