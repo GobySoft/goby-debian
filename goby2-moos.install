@@ -1,4 +1,6 @@
 usr/bin/pTranslator
 usr/bin/pAcommsHandler
+usr/bin/iFrontSeat
+usr/bin/iFrontSeat_bluefin
 usr/bin/moos_gateway_g
 usr/bin/moos_goby_liaison
