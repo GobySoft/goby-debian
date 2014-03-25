@@ -1,3 +1,15 @@
+goby2 (2.1.0~beta8-0gobydev1~precise1) precise; urgency=low
+
+  * Build at DASH-ST8a with changes to Bluefin frontseat driver
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Sat, 22 Feb 2014 16:12:45 -0400
+
+goby2 (2.1.0~beta7-0gobydev1~precise1) precise; urgency=low
+
+  * Build for DASH-ST8
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 03 Feb 2014 13:49:41 -0500
+
 goby2 (2.1.0~beta3-0gobydev1~squeeze1) squeeze; urgency=low
 
   * Release 2.1.0 beta 3: Tweaks for MAC and Driver
