@@ -1,14 +1,14 @@
-goby2 (2.1.0~beta8-0gobydev1~precise1) precise; urgency=low
+goby2 (2.0.5~rc1-0gobydev1~wheezy1) wheezy; urgency=low
 
-  * Build at DASH-ST8a with changes to Bluefin frontseat driver
+  * New upstream release
 
- -- Toby Schneider <tes.aubergine@gmail.com>  Sat, 22 Feb 2014 16:12:45 -0400
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 25 Mar 2014 16:20:35 -0400
 
-goby2 (2.1.0~beta7-0gobydev1~precise1) precise; urgency=low
+goby2 (2.1.0~beta3-1gobydev1~squeeze1) precise; urgency=low
 
-  * Build for DASH-ST8
+  * Build for MOOS10
 
- -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 03 Feb 2014 13:49:41 -0500
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 11 Oct 2013 21:26:18 -0400
 
 goby2 (2.1.0~beta3-0gobydev1~squeeze1) squeeze; urgency=low
 
