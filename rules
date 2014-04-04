@@ -3,7 +3,8 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
 
-DEB_CMAKE_EXTRA_FLAGS = -Dbuild_doc=ON -Denable_testing=ON
+
+DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 
 DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
 DEB_MAKE_CHECK_TARGET = test
@@ -15,12 +16,19 @@ ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
 endif
 
 # bug for Ubuntu PPA Saucy build machines
-ifeq ($(shell (lsb_release -c | egrep -q "saucy") && echo "yes"),yes)
+ifeq ($(shell (lsb_release -c | egrep -q "saucy|trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_zmq=OFF
 endif
 
 
 # PDF documentation build works on these newer versions of Ubuntu's Doxygen
-ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring|saucy") && echo "yes"),yes)
+ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring|saucy|trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
+endif
+
+# support DEB_BUILD_OPTIONS=nodocs
+ifeq (,$(findstring nodocs,$(DEB_BUILD_OPTIONS)))
+	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
+else
+	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=OFF
 endif

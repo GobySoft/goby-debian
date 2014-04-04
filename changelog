@@ -1,3 +1,21 @@
+goby2 (2.0.5-0gobydev3~ubuntu10.04.1) lucid; urgency=low
+
+  * Support for DEB_BUILD_OPTIONS=nodocs
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 04 Apr 2014 11:07:52 -0400
+
+goby2 (2.0.5-0gobydev2~ubuntu14.04.1) trusty; urgency=low
+
+  * ttf-sil-gentium package is now fonts-sil-gentium
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 04 Apr 2014 11:01:16 -0400
+
+goby2 (2.0.5-0gobydev1~ubuntu14.04.1) trusty; urgency=low
+
+  * New upstream final release for 2.0.5
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 04 Apr 2014 10:55:25 -0400
+
 goby2 (2.0.5~rc1-0gobydev1~wheezy1) wheezy; urgency=low
 
   * New upstream release
