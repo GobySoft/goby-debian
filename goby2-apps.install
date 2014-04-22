@@ -2,4 +2,7 @@ usr/bin/dccl_xml_to_dccl_proto
 usr/bin/analyze_dccl
 usr/bin/analyze_dccl_xml
 usr/bin/goby_bridge
+usr/bin/goby_modemdriver
 usr/bin/goby_store_server
+usr/bin/goby_rudics_shore
+usr/bin/goby_file_transfer
