@@ -1,4 +1,4 @@
-goby2 (2.0.5-0gobydev3~ubuntu10.04.1) lucid; urgency=low
+goby2 (2.0.5-0gobydev3~wheezy1) wheezy; urgency=low
 
   * Support for DEB_BUILD_OPTIONS=nodocs
 
