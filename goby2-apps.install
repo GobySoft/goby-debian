@@ -6,3 +6,4 @@ usr/bin/goby_modemdriver
 usr/bin/goby_store_server
 usr/bin/goby_rudics_shore
 usr/bin/goby_file_transfer
+usr/bin/goby_mosh_relay
