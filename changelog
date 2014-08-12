@@ -1,3 +1,9 @@
+goby2 (2.0.6-0gobydev3~ubuntu10.04.1) lucid; urgency=medium
+
+  * Another new build against fixes for MOOS 10.0.2 release (no changes to Goby)
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 07 Aug 2014 20:54:09 -0400
+
 goby2 (2.0.6-0gobydev2~ubuntu12.04.1) precise; urgency=medium
 
   * New build against fixes for MOOS 10.0.2 release (no changes to Goby)
