@@ -39,7 +39,8 @@ Build-Depends: cdbs,
                texlive-latex-recommended, 
                texlive-latex-extra,
                latex-xcolor,
-               texlive-generic-recommended
+               texlive-generic-recommended,
+               libdccl3-dev
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
@@ -73,7 +74,8 @@ Depends: libgoby2 (= ${binary:Version}),
          libprotobuf-dev, 
          libprotoc-dev,
          libmoos10-dev | moos (>= 0.2374~),
-         libproj-dev
+         libproj-dev,
+         libdccl3-dev
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 

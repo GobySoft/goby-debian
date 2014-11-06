@@ -1,20 +1,8 @@
-goby2 (2.0.6-0gobydev3~ubuntu10.04.1) lucid; urgency=medium
+goby2 (2.1.0-0gobydev1~precise1) precise; urgency=low
 
-  * Another new build against fixes for MOOS 10.0.2 release (no changes to Goby)
+  * Release 2.1.0 for DRC Build testing
 
- -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 07 Aug 2014 20:54:09 -0400
-
-goby2 (2.0.6-0gobydev2~ubuntu12.04.1) precise; urgency=medium
-
-  * New build against fixes for MOOS 10.0.2 release (no changes to Goby)
-
- -- Toby Schneider <tes.aubergine@gmail.com>  Wed, 06 Aug 2014 15:24:11 -0400
-
-goby2 (2.0.6-0gobydev1~ubuntu14.04.1) trusty; urgency=medium
-
-  * New upstream release.
-
- -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 04 Aug 2014 11:39:24 -0400
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 15 May 2014 16:27:35 -0400
 
 goby2 (2.0.5-0gobydev3~wheezy1) wheezy; urgency=low
 
