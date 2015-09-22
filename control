@@ -3,7 +3,7 @@ Priority: extra
 Maintainer: Toby Schneider <tes.aubergine@gmail.com>
 Build-Depends: cdbs,
                debhelper (>= 7.0.50~),
-	       lsb-release,
+               lsb-release,
                cmake, 
                libboost-dev (>= 1.40~), 
                libboost-system-dev (>= 1.40~),  
@@ -12,7 +12,6 @@ Build-Depends: cdbs,
                libboost-program-options-dev (>= 1.40~), 
                libboost-filesystem-dev (>= 1.40~), 
                libboost-regex-dev (>= 1.40~), 
-               libxerces-c-dev, 
                libcrypto++-dev, 
                libncurses-dev, 
                libprotobuf-dev, 
@@ -44,8 +43,6 @@ Build-Depends: cdbs,
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
-#Vcs-Git: git://git.debian.org/collab-maint/goby.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/goby.git;a=summary
 
 Package: libgoby2-dev
 Provides: libgoby-dev
@@ -68,7 +65,6 @@ Depends: libgoby2 (= ${binary:Version}),
          libwtdbo-dev (>= 3.1.8~),
          libwtdbosqlite-dev (>= 3.1.8~),
          libwthttp-dev  (>= 3.1.8~),
-         libxerces-c-dev,
          libcrypto++-dev,
          libncurses-dev,
          libprotobuf-dev, 

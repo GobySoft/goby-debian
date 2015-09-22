@@ -1,3 +1,15 @@
+goby2 (2.1.1-0gobydev1~squeeze2) squeeze; urgency=medium
+
+  * Rebuild for squeeze since I was missing moos10
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 22 Sep 2015 16:39:19 -0400
+
+goby2 (2.1.1-0gobydev1~squeeze1) squeeze; urgency=medium
+
+  * Release 2.1.1
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 22 Sep 2015 14:21:41 -0400
+
 goby2 (2.1.0-0gobydev1~precise1) precise; urgency=low
 
   * Release 2.1.0 for DRC Build testing
