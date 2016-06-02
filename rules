@@ -3,12 +3,16 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
 
-
+DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
+DEB_BUILD_PARALLEL = true
 DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 
-DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
-DEB_MAKE_CHECK_TARGET = test
-DEB_BUILD_PARALLEL = true
+# only run unit tests and build documentation on x86_64 and i386
+ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
+	DEB_MAKE_CHECK_TARGET = test
+	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
+endif
+
 
 # workaround ASIO bug in Ubuntu PPA build machines for Boost 1.49/1.50
 ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
@@ -20,15 +24,7 @@ ifeq ($(shell (lsb_release -c | egrep -q "saucy|trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_zmq=OFF
 endif
 
-
-# PDF documentation build works on these newer versions of Ubuntu's Doxygen
-ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring|saucy|trusty") && echo "yes"),yes)
+# PDF documentation build works on Trusty (not Xenial yet)
+ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
-endif
-
-# support DEB_BUILD_OPTIONS=nodocs
-ifeq (,$(findstring nodocs,$(DEB_BUILD_OPTIONS)))
-	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
-else
-	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=OFF
 endif

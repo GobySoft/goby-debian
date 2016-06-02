@@ -1,3 +1,15 @@
+goby2 (2.1.2-0gobydev1~ubuntu16.04.2) xenial; urgency=medium
+
+  * Disable PDF document build on Xenial pending debugging
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 02 Jun 2016 18:39:49 -0400
+
+goby2 (2.1.2-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Release 2.1.2
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 02 Jun 2016 10:54:36 -0400
+
 goby2 (2.1.1-0gobydev1~squeeze2) squeeze; urgency=medium
 
   * Rebuild for squeeze since I was missing moos10
