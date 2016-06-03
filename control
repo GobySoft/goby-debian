@@ -19,6 +19,7 @@ Build-Depends: cdbs,
                libsqlite3-dev,
                libzmq3-dev | libzmq-dev,
                libgmp3-dev,
+               libhdf5-dev,
                libwt-dev (>= 3.1.8~),
                libwtdbo-dev (>= 3.1.8~),
                libwtdbosqlite-dev (>= 3.1.8~),
@@ -71,7 +72,8 @@ Depends: libgoby2 (= ${binary:Version}),
          libprotoc-dev,
          libmoos10-dev | moos (>= 0.2374~),
          libproj-dev,
-         libdccl3-dev
+         libdccl3-dev,
+         libhdf5-dev
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
