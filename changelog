@@ -1,3 +1,9 @@
+goby2 (2.1.2-0gobydev2~ubuntu12.04.1) precise; urgency=medium
+
+  * Added /usr/share/goby/cmake to libgoby2-dev.install
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 03 Jun 2016 12:39:54 -0400
+
 goby2 (2.1.2-0gobydev1~ubuntu16.04.2) xenial; urgency=medium
 
   * Disable PDF document build on Xenial pending debugging
