@@ -1,3 +1,33 @@
+goby2 (2.1.2-0gobydev6~ubuntu12.04.1) precise; urgency=medium
+
+  * Added missing header for hdf5_plugin
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 03 Jun 2016 15:32:06 -0400
+
+goby2 (2.1.2-0gobydev5~ubuntu12.04.2) precise; urgency=medium
+
+  * Needs to be HDF5 Serial library
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 03 Jun 2016 15:15:09 -0400
+
+goby2 (2.1.2-0gobydev5~ubuntu12.04.1) precise; urgency=medium
+
+  * Removed stray header from HDF5 plugin test
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 03 Jun 2016 14:50:50 -0400
+
+goby2 (2.1.2-0gobydev4~ubuntu16.04.1) xenial; urgency=medium
+
+  * Added required include_directories line for Xenial HDF5
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 03 Jun 2016 14:35:03 -0400
+
+goby2 (2.1.2-0gobydev3~ubuntu16.04.1) xenial; urgency=medium
+
+  * Compile with HDF5
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 03 Jun 2016 13:27:42 -0400
+
 goby2 (2.1.2-0gobydev2~ubuntu12.04.1) precise; urgency=medium
 
   * Added /usr/share/goby/cmake to libgoby2-dev.install
