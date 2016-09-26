@@ -1,3 +1,9 @@
+goby2 (2.1.3-0gobydev1~ubuntu12.04.1) precise; urgency=medium
+
+  * Release 2.1.3
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 14 Jul 2016 12:10:21 -0400
+
 goby2 (2.1.2-0gobydev6~ubuntu12.04.1) precise; urgency=medium
 
   * Added missing header for hdf5_plugin
