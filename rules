@@ -3,8 +3,28 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
 
+DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
+DEB_BUILD_PARALLEL = true
+DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 
-# Add here any variable or target overrides you need.
+# only run unit tests and build documentation on x86_64 and i386
+ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
+	DEB_MAKE_CHECK_TARGET = test
+	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
+endif
 
-DEB_CMAKE_EXTRA_FLAGS = -Dbuild_moos=ON -Dbuild_doc=ON -DBUILD_TESTING=OFF
 
+# workaround ASIO bug in Ubuntu PPA build machines for Boost 1.49/1.50
+ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
+	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_asio=OFF
+endif
+
+# bug for Ubuntu PPA Saucy build machines
+ifeq ($(shell (lsb_release -c | egrep -q "saucy|trusty") && echo "yes"),yes)
+	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_zmq=OFF
+endif
+
+# PDF documentation build works on Trusty (not Xenial yet)
+ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
+	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
+endif

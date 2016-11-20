@@ -1,1 +1,2 @@
-usr/lib/lib*.so.*
+usr/lib/libgoby*.so.*
+usr/lib/libliaison_plugins*.so
