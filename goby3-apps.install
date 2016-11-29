@@ -6,3 +6,4 @@ usr/bin/goby_ip_gateway
 usr/bin/goby_mosh_relay
 usr/bin/goby_serial2tcp_server
 usr/bin/gobyd
+usr/bin/goby_hdf5
