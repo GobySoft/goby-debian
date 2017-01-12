@@ -12,7 +12,6 @@ Build-Depends: cdbs,
                libboost-program-options-dev (>= 1.40~), 
                libboost-filesystem-dev (>= 1.40~), 
                libboost-regex-dev (>= 1.40~), 
-               libcrypto++-dev, 
                libncurses-dev, 
                libprotobuf-dev, 
                libprotoc-dev, 
@@ -62,11 +61,6 @@ Depends: libgoby2 (= ${binary:Version}),
          libsqlite3-dev,
          libzmq3-dev | libzmq-dev,
          libgmp3-dev,
-         libwt-dev (>= 3.1.8~),
-         libwtdbo-dev (>= 3.1.8~),
-         libwtdbosqlite-dev (>= 3.1.8~),
-         libwthttp-dev  (>= 3.1.8~),
-         libcrypto++-dev,
          libncurses-dev,
          libprotobuf-dev, 
          libprotoc-dev,
@@ -75,6 +69,19 @@ Depends: libgoby2 (= ${binary:Version}),
          libdccl3-dev,
          libhdf5-serial-dev | libhdf5-dev
 Description: Developers' package for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+
+Package: libgoby2-gui-dev
+Provides: libgoby-gui-dev
+Section: libdevel
+Architecture: any
+Depends: libgoby2 (= ${binary:Version}),
+         libgoby2-dev,
+         libwt-dev (>= 3.1.8~),
+         libwtdbo-dev (>= 3.1.8~),
+         libwtdbosqlite-dev (>= 3.1.8~),
+         libwthttp-dev  (>= 3.1.8~)
+Description: Developers' GUI package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
 Package: libgoby2
