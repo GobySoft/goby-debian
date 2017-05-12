@@ -40,7 +40,7 @@ Build-Depends: cdbs,
                latex-xcolor,
                texlive-generic-recommended,
                libdccl3-dev
-Standards-Version: 3.8.4
+Standards-Version: 3.9.7
 Section: libs
 Homepage: https://launchpad.net/goby
 

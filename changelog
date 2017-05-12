@@ -1,3 +1,9 @@
+goby2 (2.1.8-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Release 2.1.8
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 09 May 2017 16:47:20 -0400
+
 goby2 (2.1.7-0gobydev2~ubuntu14.04.1) trusty; urgency=medium
 
   * No change rebuild for Multiarch updates in proj and Wt
