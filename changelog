@@ -1,3 +1,9 @@
+goby2 (2.1.9-0gobydev1~ubuntu14.04.1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 15 Jun 2017 09:33:01 -0400
+
 goby2 (2.1.8-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
 
   * Release 2.1.8
