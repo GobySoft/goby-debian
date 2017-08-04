@@ -111,7 +111,6 @@ Description: Applications for the Goby Underwater Autonomy Project
 #   This package provides a the Goby GUI applications.
 
 Package: goby3-doc
-Conflicts: goby1-doc, libgoby1-dev, goby2-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: doc
 Architecture: all
