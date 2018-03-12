@@ -1,3 +1,27 @@
+goby3 (3.0.0~alpha3-3gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * No change rebuild for DCCL 3.0.6
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Wed, 28 Feb 2018 10:45:44 -0500
+
+goby3 (3.0.0~alpha3-2gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * No change rebuild for ARM
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 27 Feb 2018 16:17:25 -0500
+
+goby3 (3.0.0~alpha3-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Rebuild, orig.tar.gz was invalid
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 27 Feb 2018 16:05:53 -0500
+
+goby3 (3.0.0~alpha3-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Pre-release Alpha3
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 27 Feb 2018 16:02:21 -0500
+
 goby3 (3.0.0~alpha1-0gobydev1~ubuntu14.04.1) trusty; urgency=medium
 
   * Pre-release of Goby3
