@@ -1,3 +1,9 @@
+goby3 (3.0.0~alpha3-4gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Added goby3_logger to goby3-apps
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 12 Mar 2018 15:11:12 -0400
+
 goby3 (3.0.0~alpha3-3gobydev1~ubuntu16.04.1) xenial; urgency=medium
 
   * No change rebuild for DCCL 3.0.6
