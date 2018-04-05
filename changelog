@@ -1,3 +1,9 @@
+goby3 (3.0.0~alpha5-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Pre-release Alpha5
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Wed, 04 Apr 2018 17:16:21 -0400
+
 goby3 (3.0.0~alpha4-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
 
   * Pre-release Alpha4: Added StateChart to goby::run, added unsubscribe
