@@ -39,7 +39,8 @@ Build-Depends: cdbs,
                texlive-latex-extra,
                latex-xcolor,
                texlive-generic-recommended,
-               libdccl3-dev
+               libdccl3-dev,
+               dccl3-compiler
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://launchpad.net/goby
@@ -69,7 +70,7 @@ Depends: libgoby3 (= ${binary:Version}),
          libprotobuf-dev, 
          libprotoc-dev,
 #         libmoos10-dev | moos (>= 0.2374~),
-#         libproj-dev,
+         libproj-dev,
          libdccl3-dev,
          libhdf5-serial-dev | libhdf5-dev
 Description: Developers' package for the Goby Underwater Autonomy Project
