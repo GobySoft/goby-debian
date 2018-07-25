@@ -37,7 +37,7 @@ Build-Depends: cdbs,
                lmodern, 
                texlive-latex-recommended, 
                texlive-latex-extra,
-               latex-xcolor,
+               latex-xcolor | texlive-latex-recommended (>= 2015.20160320~),
                texlive-generic-recommended,
                libdccl3-dev,
                dccl3-compiler
