@@ -5,13 +5,13 @@ Build-Depends: cdbs,
                debhelper (>= 7.0.50~),
                lsb-release,
                cmake, 
-               libboost-dev (>= 1.40~), 
-               libboost-system-dev (>= 1.40~),  
-               libboost-date-time-dev (>= 1.40~), 
-               libboost-thread-dev (>= 1.40~), 
-               libboost-program-options-dev (>= 1.40~), 
-               libboost-filesystem-dev (>= 1.40~), 
-               libboost-regex-dev (>= 1.40~), 
+               libboost-dev (>= 1.58~), 
+               libboost-system-dev (>= 1.58~),  
+               libboost-date-time-dev (>= 1.58~), 
+               libboost-thread-dev (>= 1.58~), 
+               libboost-program-options-dev (>= 1.58~), 
+               libboost-filesystem-dev (>= 1.58~), 
+               libboost-regex-dev (>= 1.58~), 
                libncurses-dev, 
                libprotobuf-dev, 
                libprotoc-dev, 
@@ -19,10 +19,10 @@ Build-Depends: cdbs,
                libzmq3-dev | libzmq-dev,
                libgmp3-dev,
                libhdf5-serial-dev | libhdf5-dev,
-#               libwt-dev (>= 3.1.8~),
-#               libwtdbo-dev (>= 3.1.8~),
-#               libwtdbosqlite-dev (>= 3.1.8~),
-#               libwthttp-dev  (>= 3.1.8~),
+               libwt-dev (>= 3.3.4~),
+               libwtdbo-dev (>= 3.3.4~),
+               libwtdbosqlite-dev (>= 3.3.4~),
+               libwthttp-dev  (>= 3.3.4~),
                protobuf-compiler, 
 #               libmoos10-dev | moos (>= 0.2374~),
                libproj-dev, 
@@ -51,21 +51,17 @@ Conflicts: libgoby-dev, libgoby1-dev, libgoby2-dev
 Section: libdevel
 Architecture: any
 Depends: libgoby3 (= ${binary:Version}),
-         libboost-dev (>= 1.40~), 
-         libboost-system-dev (>= 1.40~), 
-         libboost-date-time-dev (>= 1.40~), 
-         libboost-thread-dev (>= 1.40~), 
-         libboost-regex-dev (>= 1.40~), 
-         libboost-program-options-dev (>= 1.40~), 
-         libboost-filesystem-dev (>= 1.40~), 
-         libboost-regex-dev (>= 1.40~), 
+         libboost-dev (>= 1.58~), 
+         libboost-system-dev (>= 1.58~), 
+         libboost-date-time-dev (>= 1.58~), 
+         libboost-thread-dev (>= 1.58~), 
+         libboost-regex-dev (>= 1.58~), 
+         libboost-program-options-dev (>= 1.58~), 
+         libboost-filesystem-dev (>= 1.58~), 
+         libboost-regex-dev (>= 1.58~), 
          libsqlite3-dev,
          libzmq3-dev | libzmq-dev,
          libgmp3-dev,
-#         libwt-dev (>= 3.1.8~),
-#         libwtdbo-dev (>= 3.1.8~),
-#         libwtdbosqlite-dev (>= 3.1.8~),
-#         libwthttp-dev  (>= 3.1.8~),
          libncurses-dev,
          libprotobuf-dev, 
          libprotoc-dev,
@@ -75,6 +71,21 @@ Depends: libgoby3 (= ${binary:Version}),
          libhdf5-serial-dev | libhdf5-dev
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+
+Package: libgoby3-gui-dev
+Provides: libgoby-gui-dev
+Conflicts: libgoby2-gui-dev
+Section: libdevel
+Architecture: any
+Depends: libgoby3 (= ${binary:Version}),
+         libgoby3-dev,
+         libwt-dev (>= 3.3.4~),
+         libwtdbo-dev (>= 3.3.4~),
+         libwtdbosqlite-dev (>= 3.3.4~),
+         libwthttp-dev  (>= 3.3.4~)
+Description: Developers' GUI package for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+
 
 Package: libgoby3
 Conflicts: libgoby1, libgoby2
@@ -103,13 +114,14 @@ Description: Applications for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides a variety of applications and tools.
 
-# Package: goby3-gui
-# Depends: ${shlibs:Depends}, ${misc:Depends}
-# Section: science
-# Architecture: any
-# Description: GUI Applications for the Goby Underwater Autonomy Project
-#   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
-#   This package provides a the Goby GUI applications.
+Package: goby3-gui
+Conflicts: goby2-gui
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: science
+Architecture: any
+Description: GUI Applications for the Goby Underwater Autonomy Project
+  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides the Goby GUI applications, such as goby_liaison.
 
 Package: goby3-doc
 Depends: ${shlibs:Depends}, ${misc:Depends}
