@@ -1,3 +1,9 @@
+goby3 (3.0.0~alpha8-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Pre-release Alpha8 (intervehicle work and bug fixes)
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 16 Aug 2018 11:10:13 -0400
+
 goby3 (3.0.0~alpha7-0gobydev1~ubuntu18.04.1) bionic; urgency=medium
 
   * Pre-release Alpha7 (goby liaison)
