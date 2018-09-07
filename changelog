@@ -1,3 +1,15 @@
+goby3 (3.0.0~alpha9-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Disable middleware3 test on build servers
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 07 Sep 2018 16:59:53 -0400
+
+goby3 (3.0.0~alpha9-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Pre-release Alpha9
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 07 Sep 2018 15:50:24 -0400
+
 goby3 (3.0.0~alpha8-0gobydev1~ubuntu16.04.1) xenial; urgency=medium
 
   * Pre-release Alpha8 (intervehicle work and bug fixes)
