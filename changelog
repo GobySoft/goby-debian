@@ -1,3 +1,27 @@
+goby3 (3.0.0~alpha10-4gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Set LD_LIBRARY_PATH in bionic, attempt 2
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 23 Oct 2018 16:16:01 -0400
+
+goby3 (3.0.0~alpha10-3gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Set LD_LIBRARY_PATH in bionic
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 23 Oct 2018 10:43:47 -0400
+
+goby3 (3.0.0~alpha10-2gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Build against DCCL 3.0.9
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 22 Oct 2018 13:10:25 -0400
+
+goby3 (3.0.0~alpha10-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Pre-relase Alpha10
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 17 Sep 2018 16:25:01 -0400
+
 goby3 (3.0.0~alpha9-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
 
   * Disable middleware3 test on build servers

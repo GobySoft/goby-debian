@@ -4,13 +4,16 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
 
 DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
+
 DEB_BUILD_PARALLEL = true
 DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 
 # only run unit tests and build documentation on x86_64 and i386
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
-	DEB_MAKE_CHECK_TARGET = test
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
+        # for running tests
+	DEB_MAKE_ENVVARS += LD_LIBRARY_PATH=$(CURDIR)/lib
+	DEB_MAKE_CHECK_TARGET = test
 endif
 
 # bug for Ubuntu PPA Saucy build machines
@@ -22,3 +25,4 @@ endif
 ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
+
