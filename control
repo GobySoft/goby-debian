@@ -107,7 +107,7 @@ Description: Libraries for the Goby Underwater Autonomy Project
 
 Package: goby3-apps
 Conflicts: goby1-core, goby2-apps
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
 Description: Applications for the Goby Underwater Autonomy Project
@@ -116,7 +116,7 @@ Description: Applications for the Goby Underwater Autonomy Project
 
 Package: goby3-gui
 Conflicts: goby2-gui
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
 Description: GUI Applications for the Goby Underwater Autonomy Project
@@ -132,7 +132,7 @@ Description: Documentation for the Goby Underwater Autonomy Project
   This package provides Doxygen and Latex PDF user and developers' documentation.
 
 Package: goby3-test
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
 Description: Unit tests for the Goby Underwater Autonomy Project
