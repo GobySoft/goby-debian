@@ -1,3 +1,9 @@
+goby3 (3.0.0~alpha11-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Alpha 11
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 08 Nov 2018 07:51:10 +0000
+
 goby3 (3.0.0~alpha10-4gobydev1~ubuntu18.04.1) bionic; urgency=medium
 
   * Set LD_LIBRARY_PATH in bionic, attempt 2
