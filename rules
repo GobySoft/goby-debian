@@ -10,18 +10,9 @@ DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 # only run unit tests and build documentation on x86_64 and i386
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
 	DEB_MAKE_CHECK_TARGET = test
+        # for running tests
+	DEB_MAKE_ENVVARS += LD_LIBRARY_PATH=$(CURDIR)/lib
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
-endif
-
-
-# workaround ASIO bug in Ubuntu PPA build machines for Boost 1.49/1.50
-ifeq ($(shell (lsb_release -c | egrep -q "quantal|raring") && echo "yes"),yes)
-	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_asio=OFF
-endif
-
-# bug for Ubuntu PPA Saucy build machines
-ifeq ($(shell (lsb_release -c | egrep -q "saucy|trusty") && echo "yes"),yes)
-	DEB_CMAKE_EXTRA_FLAGS += -Denable_testing_zmq=OFF
 endif
 
 # PDF documentation build works on Trusty (not Xenial yet)
