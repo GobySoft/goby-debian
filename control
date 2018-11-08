@@ -39,7 +39,8 @@ Build-Depends: cdbs,
                texlive-latex-extra,
                latex-xcolor | texlive-latex-recommended (>= 2015.20160320~),
                texlive-generic-recommended,
-               libdccl3-dev
+               libdccl3-dev,
+               dccl3-compiler
 Standards-Version: 3.9.7
 Section: libs
 Homepage: https://launchpad.net/goby

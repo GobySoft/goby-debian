@@ -1,3 +1,9 @@
+goby2 (2.1.11-0gobydev1~ubuntu14.04.1) trusty; urgency=medium
+
+  * Release 2.1.10
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 08 Nov 2018 08:37:27 +0000
+
 goby2 (2.1.10-0gobydev1~ubuntu14.04.1) trusty; urgency=medium
 
   * New upstream release 2.1.10
