@@ -1,3 +1,9 @@
+goby3 (3.0.0~alpha12-1gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Alpha 12
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Mon, 19 Nov 2018 13:55:02 -0500
+
 goby3 (3.0.0~alpha11-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
 
   * Alpha 11
