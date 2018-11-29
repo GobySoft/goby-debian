@@ -9,3 +9,4 @@ usr/bin/gobyd
 usr/bin/goby_hdf5
 usr/bin/goby_logger
 usr/bin/goby_launch
+usr/bin/goby_terminate
