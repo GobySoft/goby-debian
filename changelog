@@ -1,3 +1,15 @@
+goby3 (3.0.0~alpha13-2gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Build with clang
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 29 Nov 2018 15:20:18 -0500
+
+goby3 (3.0.0~alpha13-1gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Alpha13: goby_terminate
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Thu, 29 Nov 2018 13:58:40 -0500
+
 goby3 (3.0.0~alpha12-1gobydev1~ubuntu18.04.1) bionic; urgency=medium
 
   * Alpha 12
