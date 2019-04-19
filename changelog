@@ -1,3 +1,9 @@
+goby3 (3.0.0~alpha15-1gobydev1~ubuntu16.04.1) xenial; urgency=medium
+
+  * Alpha15: logger updates, change to Multithread shutdown
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Tue, 05 Feb 2019 09:58:57 -0500
+
 goby3 (3.0.0~alpha14-1gobydev1~ubuntu18.04.1) bionic; urgency=medium
 
   * Alpha14: Updates to configuration
