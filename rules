@@ -21,5 +21,18 @@ ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
 
+DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
+DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
+ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
+        # cross compiling
+        DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU) -DCMAKE_C_FLAGS="-target $(DEB_HOST_GNU_TYPE)" -DCMAKE_CXX_FLAGS="-target $(DEB_HOST_GNU_TYPE)"
+endif
+
+$(info $$DEB_BUILD_ARCH is [${DEB_BUILD_ARCH}])
+$(info $$DEB_TARGET_ARCH is [${DEB_TARGET_ARCH}])
+$(info $$DEB_CMAKE_EXTRA_FLAGS is [${DEB_CMAKE_EXTRA_FLAGS}])
+
+
 CC=/usr/bin/clang 
 CXX=/usr/bin/clang++
