@@ -1,3 +1,9 @@
+goby2 (2.1.13-1gobydev1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Rebuild against new DCCL
+
+ -- Toby Schneider <tes.aubergine@gmail.com>  Fri, 12 Apr 2019 15:36:43 -0400
+
 goby2 (2.1.13-0gobydev1~ubuntu14.04.1) trusty; urgency=medium
 
   * Release 2.1.13
