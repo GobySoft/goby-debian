@@ -12,5 +12,5 @@ usr/lib/*/libgoby_middleware.so
 usr/lib/*/libgoby_pb.so
 usr/lib/*/libgoby_util.so
 usr/share/goby/examples
-usr/share/goby/cmake
+usr/lib/*/cmake/goby
 usr/bin/abc_modem_simulator

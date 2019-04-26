@@ -1,2 +1,3 @@
 usr/include/goby/moos/*
+usr/lib/*/cmake/goby_moos
 usr/lib/*/libgoby_moos.so
