@@ -4,6 +4,7 @@ usr/include/goby/apps/*
 usr/include/goby/common/*
 usr/include/goby/pb/*
 usr/include/goby/util/*
+usr/include/goby/middleware/*
 usr/lib/*/libgoby_acomms.so
 usr/lib/*/libgoby_common.so
 usr/lib/*/libgoby_frontseat_*.so
