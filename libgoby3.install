@@ -1,5 +1,4 @@
 usr/lib/*/libgoby_acomms.so.*
 usr/lib/*/libgoby_common.so.*
 usr/lib/*/libgoby_middleware.so.*
-usr/lib/*/libgoby_pb.so.*
 usr/lib/*/libgoby_util.so.*
