@@ -9,10 +9,8 @@ Build-Depends: cdbs,
                libboost-dev (>= 1.58~), 
                libboost-system-dev (>= 1.58~),  
                libboost-date-time-dev (>= 1.58~), 
-               libboost-thread-dev (>= 1.58~), 
                libboost-program-options-dev (>= 1.58~), 
                libboost-filesystem-dev (>= 1.58~), 
-               libboost-regex-dev (>= 1.58~), 
                libncurses-dev, 
                libprotobuf-dev, 
                libprotoc-dev, 
@@ -44,7 +42,7 @@ Build-Depends: cdbs,
                dccl3-compiler
 Standards-Version: 3.8.4
 Section: libs
-Homepage: https://launchpad.net/goby
+Homepage: https://github.com/GobySoft/goby3
 
 Package: libgoby3-dev
 Provides: libgoby-dev
@@ -55,11 +53,8 @@ Depends: libgoby3 (= ${binary:Version}),
          libboost-dev (>= 1.58~), 
          libboost-system-dev (>= 1.58~), 
          libboost-date-time-dev (>= 1.58~), 
-         libboost-thread-dev (>= 1.58~), 
-         libboost-regex-dev (>= 1.58~), 
          libboost-program-options-dev (>= 1.58~), 
          libboost-filesystem-dev (>= 1.58~), 
-         libboost-regex-dev (>= 1.58~), 
          libsqlite3-dev,
          libzmq3-dev | libzmq-dev,
          libgmp3-dev,
