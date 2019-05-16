@@ -1,31 +1,32 @@
 Source: goby3
 Priority: extra
 Maintainer: Toby Schneider <toby@gobysoft.org>
-Build-Depends: cdbs,
+Build-Depends: cdbs (>= 0.4.130~),
                debhelper (>= 7.0.50~),
-               lsb-release,
-               cmake,
-               clang,
+               cmake (>= 3.5.1~),
+               clang (>= 1:3.8~),
                libboost-dev (>= 1.58~), 
                libboost-system-dev (>= 1.58~),  
                libboost-date-time-dev (>= 1.58~), 
                libboost-program-options-dev (>= 1.58~), 
                libboost-filesystem-dev (>= 1.58~), 
-               libncurses-dev, 
-               libprotobuf-dev, 
-               libprotoc-dev, 
-               libsqlite3-dev,
-               libzmq3-dev | libzmq-dev,
-               libgmp3-dev,
-               libhdf5-serial-dev | libhdf5-dev,
-               libwt-dev (>= 3.3.4~),
-               libwtdbo-dev (>= 3.3.4~),
-               libwtdbosqlite-dev (>= 3.3.4~),
-               libwthttp-dev  (>= 3.3.4~),
-               protobuf-compiler, 
-               libmoos10-dev,
-               libproj-dev, 
-               graphviz, 
+               libncurses5-dev (>=6.0~), 
+               libprotobuf-dev (>=2.6.1~), 
+               libprotoc-dev (>=2.6.1~), 
+               libsqlite3-dev (>=3.11.0~),
+               libzmq3-dev (>=4.1.4~),
+               libgmp3-dev (>=2:6.1.0~),
+               libhdf5-dev (>=1.8.16~),
+               libproj-dev (>= 4.9.2~), 
+               libdccl3-dev (>= 3.0.11~),
+               protobuf-compiler (>=2.6.1~), 
+               dccl3-compiler (>= 3.0.11~),
+               libwt-dev (>= 3.3.12~),
+               libwtdbo-dev (>= 3.3.12~),
+               libwtdbosqlite-dev (>= 3.3.12~),
+               libwthttp-dev  (>= 3.3.12~),
+               libmoos10-dev (>= 10.0.2-5~)
+Build-Depends-Indep: graphviz, 
                doxygen, 
                texlive-xetex, 
                fonts-sil-gentium | ttf-sil-gentium, 
@@ -34,12 +35,9 @@ Build-Depends: cdbs,
                texlive-font-utils, 
                ghostscript, 
                lmodern, 
-               texlive-latex-recommended, 
+               texlive-latex-recommended (>= 2015.20160320~), 
                texlive-latex-extra,
-               latex-xcolor | texlive-latex-recommended (>= 2015.20160320~),
-               texlive-generic-recommended,
-               libdccl3-dev,
-               dccl3-compiler
+               texlive-generic-recommended
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://github.com/GobySoft/goby3
@@ -51,19 +49,19 @@ Section: libdevel
 Architecture: any
 Depends: libgoby3 (= ${binary:Version}),
          libboost-dev (>= 1.58~), 
-         libboost-system-dev (>= 1.58~), 
+         libboost-system-dev (>= 1.58~),  
          libboost-date-time-dev (>= 1.58~), 
          libboost-program-options-dev (>= 1.58~), 
          libboost-filesystem-dev (>= 1.58~), 
-         libsqlite3-dev,
-         libzmq3-dev | libzmq-dev,
-         libgmp3-dev,
-         libncurses-dev,
-         libprotobuf-dev, 
-         libprotoc-dev,
-         libproj-dev,
-         libdccl3-dev,
-         libhdf5-serial-dev | libhdf5-dev
+         libncurses5-dev (>=6.0~), 
+         libprotobuf-dev (>=2.6.1~), 
+         libprotoc-dev (>=2.6.1~), 
+         libsqlite3-dev (>=3.11.0~),
+         libzmq3-dev (>=4.1.4~),
+         libgmp3-dev (>=2:6.1.0~),
+         libhdf5-dev (>=1.8.16~),
+         libproj-dev (>= 4.9.2~), 
+         libdccl3-dev (>= 3.0.11~)
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
@@ -74,10 +72,10 @@ Section: libdevel
 Architecture: any
 Depends: libgoby3 (= ${binary:Version}),
          libgoby3-dev,
-         libwt-dev (>= 3.3.4~),
-         libwtdbo-dev (>= 3.3.4~),
-         libwtdbosqlite-dev (>= 3.3.4~),
-         libwthttp-dev  (>= 3.3.4~)
+         libwt-dev (>= 3.3.12~),
+         libwtdbo-dev (>= 3.3.12~),
+         libwtdbosqlite-dev (>= 3.3.12~),
+         libwthttp-dev  (>= 3.3.12~)
 Description: Developers' GUI package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
