@@ -62,6 +62,8 @@ Depends: libgoby3 (= ${binary:Version}),
          libhdf5-dev (>=1.8.16~),
          libproj-dev (>= 4.9.2~), 
          libdccl3-dev (>= 3.0.11~)
+Recommends: protobuf-compiler (>=2.6.1~), 
+            dccl3-compiler (>= 3.0.11~)
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
