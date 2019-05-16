@@ -136,14 +136,14 @@ Description: Developers' package for the MOOS middleware connections to the Goby
 Package: libgoby3-moos
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3 (= ${binary:Version})
 Description: MOOS Libraries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides libraries for the MOOS Middleware (https://github.com/themoos)
 
 Package: goby3-moos
 Conflicts: goby1-moos, goby2-moos
-Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3-moos
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3-moos (= ${binary:Version})
 Recommends: moosdb10
 Section: science
 Architecture: any
