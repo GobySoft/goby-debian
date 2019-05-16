@@ -25,7 +25,7 @@ Build-Depends: cdbs (>= 0.4.130~),
                libwtdbo-dev (>= 3.3.12~),
                libwtdbosqlite-dev (>= 3.3.12~),
                libwthttp-dev  (>= 3.3.12~),
-               libmoos10-dev (>= 10.0.2-5~)
+               libmoos10-dev (>= 10.0.2~)
 Build-Depends-Indep: graphviz, 
                doxygen, 
                texlive-xetex, 
@@ -126,7 +126,7 @@ Provides: libgoby-moos-dev
 Section: libdevel
 Architecture: any
 Depends: libgoby3 (= ${binary:Version}),
-         libmoos10-dev
+         libmoos10-dev (>= 10.0.2~)
 Description: Developers' package for the MOOS middleware connections to the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides developer headers for the MOOS Middleware (https://github.com/themoos)
