@@ -1,3 +1,4 @@
 usr/include/goby/moos/*
 usr/lib/*/cmake/goby_moos
 usr/lib/*/libgoby_moos.so
+usr/lib/*/libgoby_frontseat_*.so
