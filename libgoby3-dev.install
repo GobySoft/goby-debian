@@ -6,7 +6,10 @@ usr/include/goby/util/*
 usr/include/goby/middleware/*
 usr/include/goby/time/*
 usr/include/goby/protobuf/*
+usr/include/goby/zeromq/*
 usr/lib/*/libgoby.so
+usr/lib/*/libgoby_zeromq.so
 usr/share/goby/examples
 usr/lib/*/cmake/goby
+usr/lib/*/cmake/goby_zeromq
 usr/bin/abc_modem_simulator
