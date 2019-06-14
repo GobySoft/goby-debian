@@ -128,6 +128,7 @@ Provides: libgoby-moos-dev
 Section: libdevel
 Architecture: any
 Depends: libgoby3 (= ${binary:Version}),
+         libgoby3-dev,
          libmoos10-dev (>= 10.0.2~)
 Description: Developers' package for the MOOS middleware connections to the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
