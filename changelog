@@ -1,3 +1,9 @@
+goby2 (2.1.13-1gobydev2~ubuntu16.04.1) xenial; urgency=medium
+
+  * Rebuild against new Wt
+
+ -- Toby Schneider <toby@gobysoft.org>  Thu, 25 Apr 2019 10:56:08 -0400
+
 goby2 (2.1.13-1gobydev1~ubuntu18.04.1) bionic; urgency=medium
 
   * Rebuild against new DCCL
