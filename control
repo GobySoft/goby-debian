@@ -26,7 +26,8 @@ Build-Depends: cdbs (>= 0.4.130~),
                libwtdbo-dev (>= 3.3.12~),
                libwtdbosqlite-dev (>= 3.3.12~),
                libwthttp-dev  (>= 3.3.12~),
-               libmoos10-dev (>= 10.0.2~)
+               libmoos10-dev (>= 10.0.2~),
+               libmavlink-dev (>= 1.0.12~)
 Build-Depends-Indep: graphviz, 
                doxygen, 
                texlive-xetex, 
@@ -62,7 +63,8 @@ Depends: libgoby3 (= ${binary:Version}),
          libgmp3-dev (>=2:6.1.0~),
          libhdf5-dev (>=1.8.16~),
          libproj-dev (>= 4.9.2~), 
-         libdccl3-dev (>= 3.0.11~)
+         libdccl3-dev (>= 3.0.11~),
+         libmavlink-dev (>= 1.0.12~)
 Recommends: protobuf-compiler (>=2.6.1~), 
             dccl3-compiler (>= 3.0.11~)
 Description: Developers' package for the Goby Underwater Autonomy Project
