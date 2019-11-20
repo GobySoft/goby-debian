@@ -27,6 +27,7 @@ Build-Depends: cdbs (>= 0.4.130~),
                libwtdbosqlite-dev (>= 3.3.12~),
                libwthttp-dev  (>= 3.3.12~),
                libmoos10-dev (>= 10.0.2~),
+               libais-dev (>= 0.17~),
                libmavlink-dev (>= 1.0.12~)
 Build-Depends-Indep: graphviz, 
                doxygen, 
@@ -66,6 +67,7 @@ Depends: libgoby3 (= ${binary:Version}),
          libdccl3-dev (>= 3.0.11~)
 Recommends: protobuf-compiler (>=2.6.1~), 
             dccl3-compiler (>= 3.0.11~),
+            libais-dev (>= 0.17~),
             libmavlink-dev (>= 1.0.12~)
 Description: Developers' package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
