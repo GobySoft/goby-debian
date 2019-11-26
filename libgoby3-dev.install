@@ -9,7 +9,6 @@ usr/include/goby/protobuf/*
 usr/include/goby/zeromq/*
 usr/lib/*/libgoby.so
 usr/lib/*/libgoby_zeromq.so
-usr/share/goby/examples
 usr/lib/*/cmake/goby/goby-config*.cmake
 usr/lib/*/cmake/goby/goby_core-config*.cmake
 usr/lib/*/cmake/goby/goby_zeromq-config*.cmake

@@ -5,3 +5,4 @@ usr/bin/goby_logger
 usr/bin/goby_launch
 usr/bin/goby_terminate
 usr/bin/goby_log_tool
+usr/bin/goby_coroner
