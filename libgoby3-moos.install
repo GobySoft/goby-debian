@@ -1,4 +1,4 @@
 usr/lib/*/libgoby_frontseat_*.so.*
 usr/lib/*/libgoby_moos.so.*
-usr/lib/*/libgoby_*_moos_gateway_plugin.so*
+usr/lib/*/libgoby_*_moos_gateway_plugin.so.*
 
