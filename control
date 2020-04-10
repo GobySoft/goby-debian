@@ -28,7 +28,10 @@ Build-Depends: cdbs (>= 0.4.130~),
                libwthttp-dev  (>= 3.3.12~),
                libmoos10-dev (>= 10.0.2~),
                libais-dev (>= 0.17~),
-               libmavlink-dev (>= 1.0.12~)
+               libmavlink-dev (>= 1.0.12~),
+               llvm (>=6~) | llvm-7 | llvm-8,
+               libclang-dev (>=6~) | llclang-7-dev | libclang-8-dev,
+               libyaml-cpp-dev (>=0.5.2-3)
 Build-Depends-Indep: graphviz, 
                doxygen, 
                texlive-xetex, 
@@ -50,6 +53,7 @@ Provides: libgoby-dev
 Conflicts: libgoby-dev, libgoby1-dev, libgoby2-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libgoby3 (= ${binary:Version}),
          libboost-dev (>= 1.58~), 
          libboost-system-dev (>= 1.58~),  
@@ -68,8 +72,17 @@ Depends: libgoby3 (= ${binary:Version}),
 Recommends: protobuf-compiler (>=2.6.1~), 
             dccl3-compiler (>= 3.0.11~),
             libais-dev (>= 0.17~),
-            libmavlink-dev (>= 1.0.12~)
+            libmavlink-dev (>= 1.0.12~),
+            goby3-clang-tool (= ${binary:Version})
 Description: Developers' package for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+
+Package: goby3-clang-tool
+Section: science
+Architecture: any
+Multi-Arch: foreign
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Clang compiler tool (goby_clang_tool) for generating metadata from Goby3 code
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
 Package: libgoby3-gui-dev
@@ -77,6 +90,7 @@ Provides: libgoby-gui-dev
 Conflicts: libgoby2-gui-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libgoby3 (= ${binary:Version}),
          libgoby3-dev,
          libwt-dev (>= 3.3.12~),
@@ -90,6 +104,7 @@ Package: libgoby3
 Conflicts: libgoby1, libgoby2
 Section: libs
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
@@ -132,6 +147,7 @@ Package: libgoby3-moos-dev
 Provides: libgoby-moos-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libgoby3 (= ${binary:Version}),
          libgoby3-dev,
          libmoos10-dev (>= 10.0.2~)
@@ -142,6 +158,7 @@ Description: Developers' package for the MOOS middleware connections to the Goby
 Package: libgoby3-moos
 Section: libs
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3 (= ${binary:Version})
 Description: MOOS Libraries for the Goby Underwater Autonomy Project
   The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
