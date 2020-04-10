@@ -30,7 +30,7 @@ Build-Depends: cdbs (>= 0.4.130~),
                libais-dev (>= 0.17~),
                libmavlink-dev (>= 1.0.12~),
                llvm (>=1:6~) [amd64] | llvm-7 [amd64] | llvm-8 [amd64],
-               libclang-dev (>=1:6~) [amd64] | llclang-7-dev [amd64] | libclang-8-dev [amd64],
+               libclang-dev (>=1:6~) [amd64] | libclang-7-dev [amd64] | libclang-8-dev [amd64],
                libyaml-cpp-dev (>=0.5.2-3) [amd64]
 Build-Depends-Indep: graphviz, 
                doxygen, 
