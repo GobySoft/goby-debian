@@ -29,9 +29,9 @@ Build-Depends: cdbs (>= 0.4.130~),
                libmoos10-dev (>= 10.0.2~),
                libais-dev (>= 0.17~),
                libmavlink-dev (>= 1.0.12~),
-               llvm (>=6~) | llvm-7 | llvm-8,
-               libclang-dev (>=6~) | llclang-7-dev | libclang-8-dev,
-               libyaml-cpp-dev (>=0.5.2-3)
+               llvm [amd64] (>=6~) | llvm-7 [amd64] | llvm-8 [amd64],
+               libclang-dev [amd64] (>=6~) | llclang-7-dev [amd64] | libclang-8-dev [amd64],
+               libyaml-cpp-dev [amd64] (>=0.5.2-3)
 Build-Depends-Indep: graphviz, 
                doxygen, 
                texlive-xetex, 
@@ -79,7 +79,7 @@ Description: Developers' package for the Goby Underwater Autonomy Project
 
 Package: goby3-clang-tool
 Section: science
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Clang compiler tool (goby_clang_tool) for generating metadata from Goby3 code
