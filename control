@@ -81,7 +81,7 @@ Package: goby3-clang-tool
 Section: science
 Architecture: amd64
 Multi-Arch: foreign
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: Clang compiler tool (goby_clang_tool) for generating metadata from Goby3 code
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
@@ -107,7 +107,7 @@ Architecture: any
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Libraries for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
 Package: goby3-apps
 Conflicts: goby1-core, goby2-apps
@@ -115,7 +115,7 @@ Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
 Description: Applications for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides a variety of applications and tools.
 
 Package: goby3-gui
@@ -124,7 +124,7 @@ Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
 Description: GUI Applications for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides the Goby GUI applications, such as goby_liaison.
 
 Package: goby3-doc
@@ -132,7 +132,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Section: doc
 Architecture: all
 Description: Documentation for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides Doxygen and Latex PDF user and developers' documentation.
 
 Package: goby3-test
@@ -140,7 +140,7 @@ Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
 Architecture: any
 Description: Unit tests for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides a the Goby unit tests.
 
 Package: libgoby3-moos-dev
@@ -161,8 +161,8 @@ Architecture: any
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3 (= ${binary:Version})
 Description: MOOS Libraries for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
-  This package provides libraries for the MOOS Middleware (https://github.com/themoos)
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ This package provides libraries for the MOOS Middleware (https://github.com/themoos)
 
 Package: goby3-moos
 Conflicts: goby1-moos, goby2-moos
@@ -171,5 +171,5 @@ Recommends: moosdb10
 Section: science
 Architecture: any
 Description: MOOS Binaries for the Goby Underwater Autonomy Project
-  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
-  This package provides applications for the MOOS Middleware (https://github.com/themoos)
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ This package provides applications for the MOOS Middleware (https://github.com/themoos)

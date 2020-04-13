@@ -13,3 +13,4 @@ usr/lib/*/cmake/goby/goby-config*.cmake
 usr/lib/*/cmake/goby/goby_core-config*.cmake
 usr/lib/*/cmake/goby/goby_zeromq-config*.cmake
 usr/bin/abc_modem_simulator
+usr/share/goby/interfaces
