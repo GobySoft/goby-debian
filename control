@@ -51,6 +51,7 @@ Homepage: https://github.com/GobySoft/goby3
 Package: libgoby3-dev
 Provides: libgoby-dev
 Conflicts: libgoby-dev, libgoby1-dev, libgoby2-dev
+Recommends: goby3-interfaces
 Section: libdevel
 Architecture: any
 Multi-Arch: same
@@ -134,6 +135,14 @@ Architecture: all
 Description: Documentation for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides Doxygen and Latex PDF user and developers' documentation.
+
+Package: goby3-interfaces
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: doc
+Architecture: all
+Description: Interfaces definition files for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides YAML interface files for the Goby middleware publish/subscribe applications
 
 Package: goby3-test
 Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
