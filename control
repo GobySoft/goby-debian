@@ -43,7 +43,7 @@ Build-Depends-Indep: graphviz,
                lmodern, 
                texlive-latex-recommended (>= 2015.20160320~), 
                texlive-latex-extra,
-               texlive-generic-recommended
+               texlive-plain-generic | texlive-generic-recommended
 Standards-Version: 3.8.4
 Section: libs
 Homepage: https://github.com/GobySoft/goby3
