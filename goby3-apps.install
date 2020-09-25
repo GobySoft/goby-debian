@@ -7,3 +7,4 @@ usr/bin/goby_terminate
 usr/bin/goby_log_tool
 usr/bin/goby_coroner
 usr/bin/goby_mavlink_gateway
+usr/bin/goby_frontseat_interface*
