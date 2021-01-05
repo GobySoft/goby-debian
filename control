@@ -29,6 +29,7 @@ Build-Depends: cdbs (>= 0.4.130~),
                libmoos10-dev (>= 10.0.2~),
                libais-dev (>= 0.17~),
                libmavlink-dev (>= 1.0.12~),
+               libgps-dev (>= 3.15~),
                llvm-dev (>=1:4~) [amd64] | llvm-4.0-dev [amd64] | llvm-7-dev [amd64],
                libclang-dev (>=1:4~) [amd64] | libclang-4.0-dev [amd64] | libclang-7-dev [amd64],
                libyaml-cpp-dev (>=0.5.2-3) [amd64]
