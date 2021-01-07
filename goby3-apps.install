@@ -9,4 +9,4 @@ usr/bin/goby_coroner
 usr/bin/goby_mavlink_gateway
 usr/bin/goby_frontseat_interface*
 usr/bin/goby_serial_mux
-usr/bin/goby_gpsd
+usr/bin/goby_gps
