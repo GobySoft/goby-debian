@@ -12,3 +12,4 @@ usr/bin/goby_serial_mux
 usr/bin/goby_gps
 usr/bin/goby_geov_interface
 usr/bin/goby_opencpn_interface
+usr/bin/goby_basic_frontseat_simulator
