@@ -34,6 +34,3 @@ $(info $$DEB_CMAKE_EXTRA_FLAGS is [${DEB_CMAKE_EXTRA_FLAGS}])
 ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
-
-CC=/usr/bin/clang 
-CXX=/usr/bin/clang++
