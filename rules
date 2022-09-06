@@ -14,7 +14,7 @@ DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
 DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
 ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
         # cross compiling
-        DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU) -DCMAKE_C_FLAGS="-target $(DEB_HOST_GNU_TYPE)" -DCMAKE_CXX_FLAGS="-target $(DEB_HOST_GNU_TYPE)"
+        DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
 else
 # only run unit tests and build documentation on x86_64 and i386
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
@@ -35,5 +35,5 @@ ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
 	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
 
-CC=/usr/bin/clang 
-CXX=/usr/bin/clang++
+CC=$(DEB_HOST_GNU_TYPE)-gcc
+CXX=$(DEB_HOST_GNU_TYPE)-g++
