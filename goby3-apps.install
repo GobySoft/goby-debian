@@ -1,5 +1,6 @@
 usr/bin/goby_serial2tcp_server
 usr/bin/gobyd
+usr/bin/goby_intervehicle_portal
 usr/bin/goby_hdf5
 usr/bin/goby_logger
 usr/bin/goby_launch
