@@ -16,3 +16,9 @@ usr/bin/goby_opencpn_interface
 usr/bin/goby_basic_frontseat_simulator
 usr/bin/goby
 usr/bin/goby_zeromq_tool
+usr/bin/goby_store_server
+usr/bin/goby_bridge
+usr/bin/goby_file_transfer
+usr/bin/goby_ip_gateway
+usr/bin/goby_modemdriver
+usr/bin/goby_mosh_relay
