@@ -20,10 +20,7 @@ Build-Depends: cdbs (>= 0.4.130~),
                libdccl4-dev (>= 4.0.0~) | libdccl3-dev (>= 3.0.11~),
                protobuf-compiler (>=2.6.1~), 
                dccl4-compiler (>= 4.0.0~) | dccl3-compiler (>= 3.0.11~),
-               libwt-dev (>= 3.3.12~),
-               libwtdbo-dev (>= 3.3.12~),
-               libwtdbosqlite-dev (>= 3.3.12~),
-               libwthttp-dev  (>= 3.3.12~),
+               libwt4-dev (>= 4.11.3~),
                libmoos10-dev (>= 10.0.2~),
                libais-dev (>= 0.17~),
                libmavlink-dev:all (>= 1.0.12~),
@@ -93,10 +90,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libgoby3 (= ${binary:Version}),
          libgoby3-dev,
-         libwt-dev (>= 3.3.12~),
-         libwtdbo-dev (>= 3.3.12~),
-         libwtdbosqlite-dev (>= 3.3.12~),
-         libwthttp-dev  (>= 3.3.12~)
+         libwt4-dev (>= 4.11.3~)
 Description: Developers' GUI package for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
 
