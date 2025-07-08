@@ -137,6 +137,14 @@ Description: Interfaces definition files for the Goby Underwater Autonomy Projec
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides YAML interface files for the Goby middleware publish/subscribe applications
 
+Package: goby3-julia
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: science
+Architecture: all
+Description: Julia Language support library for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides a module for interfacing with the Goby middleware using the Julia language.
+
 Package: goby3-test
 Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Section: science
