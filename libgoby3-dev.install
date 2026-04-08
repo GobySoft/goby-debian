@@ -6,6 +6,7 @@ usr/include/goby/util/*
 usr/include/goby/middleware/*
 usr/include/goby/time/*
 usr/include/goby/protobuf/*
+usr/include/goby/udpm/*
 usr/include/goby/zeromq/*
 usr/lib/*/libgoby.so
 usr/lib/*/libgoby_zeromq.so
