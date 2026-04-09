@@ -22,3 +22,4 @@ usr/bin/goby_file_transfer
 usr/bin/goby_ip_gateway
 usr/bin/goby_modemdriver
 usr/bin/goby_mosh_relay
+usr/bin/goby_abc_modem_simulator
