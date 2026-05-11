@@ -1,0 +1,3 @@
+usr/include/goby/test/*/*.pb.h
+usr/include/goby/test/*/*.proto
+usr/share/goby/xml/*.xml
