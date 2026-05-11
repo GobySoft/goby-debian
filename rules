@@ -1,39 +1,46 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/cmake.mk
-
-DEB_MAKE_ENVVARS = CTEST_OUTPUT_ON_FAILURE=ON
-
-DEB_BUILD_PARALLEL = true
-DEB_CMAKE_EXTRA_FLAGS = -Denable_testing=ON
-
+export CTEST_OUTPUT_ON_FAILURE=ON
 
 DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
 DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
+DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+
+CMAKE_EXTRA_FLAGS = -Denable_testing=ON
+RUN_TESTS = no
+
 ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
-        # cross compiling
-        DEB_CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
+	# cross compiling
+	CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
+	export CC=$(DEB_HOST_GNU_TYPE)-gcc
+	export CXX=$(DEB_HOST_GNU_TYPE)-g++
 else
 # only run unit tests and build documentation on x86_64 and i386
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
-	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
-        # for running tests
-	DEB_MAKE_ENVVARS += LD_LIBRARY_PATH=$(CURDIR)/lib
-	DEB_MAKE_CHECK_TARGET = test
+	CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
+	# for running tests
+	export LD_LIBRARY_PATH=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib
+	RUN_TESTS = yes
 endif
 endif
 
 $(info $$DEB_BUILD_ARCH is [${DEB_BUILD_ARCH}])
 $(info $$DEB_TARGET_ARCH is [${DEB_TARGET_ARCH}])
-$(info $$DEB_CMAKE_EXTRA_FLAGS is [${DEB_CMAKE_EXTRA_FLAGS}])
-
+$(info $$CMAKE_EXTRA_FLAGS is [${CMAKE_EXTRA_FLAGS}])
 
 # PDF documentation build works on Trusty (not Xenial yet)
 ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
-	DEB_CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
+	CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
 endif
 
-CC=$(DEB_HOST_GNU_TYPE)-gcc
-CXX=$(DEB_HOST_GNU_TYPE)-g++
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(CMAKE_EXTRA_FLAGS)
+
+override_dh_auto_test:
+ifeq ($(RUN_TESTS),yes)
+	dh_auto_test
+endif
