@@ -11,7 +11,7 @@ CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 RUN_TESTS = no
 
 ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
-	# cross compiling
+        # cross compiling
 	CMAKE_EXTRA_FLAGS += -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=$(DEB_TARGET_GNU_CPU)
 	export CC=$(DEB_HOST_GNU_TYPE)-gcc
 	export CXX=$(DEB_HOST_GNU_TYPE)-g++
@@ -19,7 +19,7 @@ else
 # only run unit tests and build documentation on x86_64 and i386
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
 	CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
-	# for running tests
+        # for running tests
 	export LD_LIBRARY_PATH=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib
 	RUN_TESTS = yes
 endif
