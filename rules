@@ -16,8 +16,8 @@ ifneq ($(DEB_BUILD_ARCH),$(DEB_TARGET_ARCH))
 	export CC=$(DEB_HOST_GNU_TYPE)-gcc
 	export CXX=$(DEB_HOST_GNU_TYPE)-g++
 else
-# only run unit tests and build documentation on x86_64 and i386
-ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64|i386") && echo "yes"),yes)
+# only run unit tests and build documentation on x86_64
+ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64") && echo "yes"),yes)
 	CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
         # for running tests
 	export LD_LIBRARY_PATH=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib
@@ -28,11 +28,6 @@ endif
 $(info $$DEB_BUILD_ARCH is [${DEB_BUILD_ARCH}])
 $(info $$DEB_TARGET_ARCH is [${DEB_TARGET_ARCH}])
 $(info $$CMAKE_EXTRA_FLAGS is [${CMAKE_EXTRA_FLAGS}])
-
-# PDF documentation build works on Trusty (not Xenial yet)
-ifeq ($(shell (lsb_release -c | egrep -q "trusty") && echo "yes"),yes)
-	CMAKE_EXTRA_FLAGS += -Dbuild_doc_pdf=ON
-endif
 
 %:
 	dh $@
