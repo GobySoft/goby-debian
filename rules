@@ -6,6 +6,7 @@ DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_TARGET_ARCH ?= $(shell dpkg-architecture -qDEB_TARGET_ARCH)
 DEB_TARGET_GNU_CPU ?= $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU)
 DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+VERSION_CODENAME ?= $(shell . /etc/os-release 2>/dev/null && echo $$VERSION_CODENAME)
 
 CMAKE_EXTRA_FLAGS = -Denable_testing=ON
 RUN_TESTS = no
@@ -41,3 +42,10 @@ endif
 override_dh_shlibdeps:
 	dh_shlibdeps -l$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib -pgoby3-clang-tool -- --ignore-missing-info
 	dh_shlibdeps -l$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib --remaining-packages
+
+override_dh_dwz:
+ifeq ($(VERSION_CODENAME),noble)
+	@echo "Skipping dh_dwz on Ubuntu noble due dwz .debug_addr handling issue"
+else
+	dh_dwz -a
+endif
