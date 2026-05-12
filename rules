@@ -45,7 +45,7 @@ override_dh_shlibdeps:
 
 override_dh_dwz:
 ifeq ($(VERSION_CODENAME),noble)
-	@echo "Skipping dh_dwz on Ubuntu noble due dwz .debug_addr handling issue"
+	@echo "Skipping dh_dwz on Ubuntu noble due to dwz .debug_addr handling issue"
 else
 	dh_dwz -a
 endif
