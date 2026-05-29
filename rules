@@ -45,8 +45,8 @@ override_dh_shlibdeps:
 
 override_dh_dwz:
 ifeq ($(VERSION_CODENAME),noble)
-	# Ubuntu noble 24.04 dwz fails on goby_clang_tool with:
-	# "Unknown debugging section .debug_addr"
+        # Ubuntu noble 24.04 dwz fails on goby_clang_tool with:
+        # "Unknown debugging section .debug_addr"
 	@echo "Skipping dh_dwz on Ubuntu noble due to dwz .debug_addr handling issue"
 else
 	dh_dwz -a
