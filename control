@@ -32,6 +32,7 @@ Build-Depends: debhelper-compat (= 13),
                python3-dev [amd64],
                python3-yaml [amd64],
                python3-protobuf [amd64],
+               python3-dccl5 [amd64],
                pybind11-dev [amd64]
 Build-Depends-Indep: graphviz, 
                doxygen, 
@@ -152,6 +153,7 @@ Description: Julia Language support library for the Goby Underwater Autonomy Pro
 
 Package: python3-goby3
 Depends: ${python3:Depends}, ${misc:Depends},
+         python3-dccl5,
          python3-protobuf,
          python3-yaml
 Suggests: python3-jsonschema,
