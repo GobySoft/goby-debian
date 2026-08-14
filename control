@@ -26,7 +26,14 @@ Build-Depends: debhelper-compat (= 13),
                default-libmysqlclient-dev (>= 1.0.2~) | libmysqlclient-dev (>=5.7~),
                llvm-dev (>=1:4~) [amd64] | llvm-4.0-dev [amd64] | llvm-7-dev [amd64],
                libclang-dev (>=1:4~) [amd64] | libclang-4.0-dev [amd64] | libclang-7-dev [amd64],
-               libyaml-cpp-dev (>=0.5.2-3) [amd64]
+               libyaml-cpp-dev (>=0.5.2-3) [amd64],
+               dh-python,
+               python3-all [amd64],
+               python3-dev [amd64],
+               python3-yaml [amd64],
+               python3-protobuf [amd64],
+               python3-dccl5 [amd64],
+               pybind11-dev [amd64]
 Build-Depends-Indep: graphviz, 
                doxygen, 
                texlive-xetex, 
@@ -143,6 +150,20 @@ Architecture: all
 Description: Julia Language support library for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
   This package provides a module for interfacing with the Goby middleware using the Julia language.
+
+Package: python3-goby3
+Depends: ${python3:Depends}, ${misc:Depends},
+         python3-dccl5,
+         python3-protobuf,
+         python3-yaml
+Suggests: python3-jsonschema,
+          pybind11-dev,
+          libgoby3-dev
+Section: python
+Architecture: all
+Description: Python language support library for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides a module for interfacing with the Goby middleware using the Python language, along with goby_gen_cpp, which generates the binding code for a Goby Python application from its interface.yml. Building such an application also needs libgoby3-dev and pybind11-dev.
 
 Package: goby3-test
 Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
