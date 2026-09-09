@@ -26,6 +26,10 @@ else
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64") && echo "yes"),yes)
 	CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
 	RUN_TESTS = yes
+	# Eclipse ships libzenohc for amd64, arm64 and armhf, but not as Multi-Arch: same, so it is
+	# not co-installable for a foreign architecture as the cross builds would need
+	CMAKE_EXTRA_FLAGS += -Dbuild_zenoh=ON
+	ZENOH_PKGS = -plibgoby3-zenoh -pgoby3-zenoh
 	# dist-packages rather than the interpreter's own purelib: on Debian and derivatives that is
 	# the versioned /usr/local path, which is not where a packaged pure Python module belongs
 	PYTHON_CMAKE_FLAGS = -Dbuild_python=ON -DGOBY_PYTHON_INSTALL_DIR=/usr/lib/python3/dist-packages
@@ -51,6 +55,11 @@ endif
 
 override_dh_shlibdeps:
 	dh_shlibdeps -l$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib -pgoby3-clang-tool -- --ignore-missing-info
+ifneq ($(ZENOH_PKGS),)
+        # libzenohc has an unversioned SONAME and ships no shlibs file, so no dependency can be
+        # derived from it; control names libzenohc explicitly instead
+	dh_shlibdeps -l$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib $(ZENOH_PKGS) -- --ignore-missing-info
+endif
 	dh_shlibdeps -l$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib --remaining-packages
 
 override_dh_dwz:
