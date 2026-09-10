@@ -32,11 +32,14 @@ ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64") && echo "y
 endif
 endif
 
-# Eclipse ships libzenohc for every architecture built here. It is not Multi-Arch: same, so the
-# host-architecture library replaces rather than joins the build architecture's -- which is what a
-# cross build wants, since nothing here links libzenohc for the build architecture.
+# Zenoh is 64-bit only here: zenohcxx is packaged Architecture: all but its CMake configuration
+# declares the pointer size of the machine it was built on, so a 32-bit build cannot use it.
+# libzenohc itself cross-installs fine -- it is not Multi-Arch: same, so the host-architecture
+# library replaces rather than joins the build architecture's, which is what a cross build wants.
+ifneq ($(filter $(DEB_TARGET_ARCH),amd64 arm64),)
 CMAKE_EXTRA_FLAGS += -Dbuild_zenoh=ON
 ZENOH_PKGS = -plibgoby3-zenoh -pgoby3-zenoh
+endif
 
 CMAKE_EXTRA_FLAGS += $(PYTHON_CMAKE_FLAGS)
 
