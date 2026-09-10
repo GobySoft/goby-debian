@@ -26,15 +26,17 @@ else
 ifeq ($(shell (dpkg-architecture -qDEB_BUILD_ARCH | egrep -q "amd64") && echo "yes"),yes)
 	CMAKE_EXTRA_FLAGS += -Dbuild_doc=ON
 	RUN_TESTS = yes
-	# Eclipse ships libzenohc for amd64, arm64 and armhf, but not as Multi-Arch: same, so it is
-	# not co-installable for a foreign architecture as the cross builds would need
-	CMAKE_EXTRA_FLAGS += -Dbuild_zenoh=ON
-	ZENOH_PKGS = -plibgoby3-zenoh -pgoby3-zenoh
 	# dist-packages rather than the interpreter's own purelib: on Debian and derivatives that is
 	# the versioned /usr/local path, which is not where a packaged pure Python module belongs
 	PYTHON_CMAKE_FLAGS = -Dbuild_python=ON -DGOBY_PYTHON_INSTALL_DIR=/usr/lib/python3/dist-packages
 endif
 endif
+
+# Eclipse ships libzenohc for every architecture built here. It is not Multi-Arch: same, so the
+# host-architecture library replaces rather than joins the build architecture's -- which is what a
+# cross build wants, since nothing here links libzenohc for the build architecture.
+CMAKE_EXTRA_FLAGS += -Dbuild_zenoh=ON
+ZENOH_PKGS = -plibgoby3-zenoh -pgoby3-zenoh
 
 CMAKE_EXTRA_FLAGS += $(PYTHON_CMAKE_FLAGS)
 
