@@ -13,6 +13,8 @@ Build-Depends: debhelper-compat (= 13),
                libprotoc-dev (>=2.6.1~), 
                libsqlite3-dev (>=3.11.0~),
                cppzmq-dev (>= 4.9.0~) | libzmq3-dev (>=4.1.4~),
+               libzenohc-dev (>= 1.0~) [amd64 arm64],
+               libzenohcpp-dev:native (>= 1.0~) [amd64 arm64],
                libgmp3-dev (>=2:6.1.0~),
                libhdf5-dev (>=1.8.16~),
                libproj-dev (>= 4.9.2~), 
@@ -112,6 +114,7 @@ Description: Libraries for the Goby Underwater Autonomy Project
 Package: goby3-apps
 Conflicts: goby1-core, goby2-apps
 Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Suggests: goby3-zenoh
 Section: science
 Architecture: any
 Description: Applications for the Goby Underwater Autonomy Project
@@ -204,3 +207,32 @@ Architecture: any
 Description: MOOS Binaries for the Goby Underwater Autonomy Project
  The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
  This package provides applications for the MOOS Middleware (https://github.com/themoos)
+
+Package: libgoby3-zenoh-dev
+Section: libdevel
+Architecture: amd64 arm64
+Depends: libgoby3 (= ${binary:Version}),
+         libgoby3-zenoh (= ${binary:Version}),
+         libgoby3-dev,
+         libzenohc-dev (>= 1.0~),
+         libzenohcpp-dev (>= 1.0~)
+Description: Developers' package for the Zenoh transport of the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+  This package provides developer headers for the Zenoh transport (https://zenoh.io)
+
+Package: libgoby3-zenoh
+Section: libs
+Architecture: amd64 arm64
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3 (= ${binary:Version}),
+         libzenohc (>= 1.0~)
+Description: Zenoh Libraries for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ This package provides libraries for the Zenoh transport (https://zenoh.io)
+
+Package: goby3-zenoh
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgoby3-zenoh (= ${binary:Version})
+Section: science
+Architecture: amd64 arm64
+Description: Zenoh Binaries for the Goby Underwater Autonomy Project
+ The Goby Underwater Autonomy Project aims to create a unified framework for multiple scientific autonomous marine vehicle collaboration, seamlessly incorporating acoustic, ethernet, wifi, and serial communications. Presently the main thrust of the project is developing a set of robust acoustic networking libraries.
+ This package provides applications for the Zenoh transport (https://zenoh.io)
