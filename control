@@ -26,7 +26,7 @@ Build-Depends: debhelper-compat (= 13),
                default-libmysqlclient-dev (>= 1.0.2~) | libmysqlclient-dev (>=5.7~),
                llvm-dev (>=1:4~) [amd64] | llvm-4.0-dev [amd64] | llvm-7-dev [amd64],
                libclang-dev (>=1:4~) [amd64] | libclang-4.0-dev [amd64] | libclang-7-dev [amd64],
-               libyaml-cpp-dev (>=0.5.2-3) [amd64],
+               libyaml-cpp-dev (>=0.5.2-3),
                dh-python,
                python3-all [amd64],
                python3-dev [amd64],
@@ -112,6 +112,7 @@ Description: Libraries for the Goby Underwater Autonomy Project
 Package: goby3-apps
 Conflicts: goby1-core, goby2-apps
 Depends: libgoby3 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Suggests: graphviz
 Section: science
 Architecture: any
 Description: Applications for the Goby Underwater Autonomy Project
