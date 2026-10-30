@@ -44,6 +44,11 @@ $(info $$CMAKE_EXTRA_FLAGS is [${CMAKE_EXTRA_FLAGS}])
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKE_EXTRA_FLAGS)
 
+# goby3-test's goby_test_* glob also matches goby_test_tool, which belongs in goby3-apps
+override_dh_install:
+	dh_install
+	rm -f debian/goby3-test/usr/bin/goby_test_tool
+
 override_dh_auto_test:
 ifeq ($(RUN_TESTS),yes)
 	LD_LIBRARY_PATH=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)/lib dh_auto_test
