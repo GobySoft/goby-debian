@@ -26,3 +26,4 @@ usr/bin/goby_abc_modem_simulator
 usr/bin/goby_playback
 usr/bin/goby_rockblock_simulator
 usr/bin/goby_udpm_tool
+usr/bin/goby_test_tool
