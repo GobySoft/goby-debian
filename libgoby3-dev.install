@@ -18,4 +18,5 @@ usr/lib/*/cmake/goby/goby_zeromq-config*.cmake
 usr/lib/*/cmake/goby/GobyPython.cmake
 usr/lib/*/cmake/goby/GobyJulia.cmake
 usr/lib/*/cmake/goby/GobyTarget.cmake
+usr/lib/*/cmake/goby/GobyInterfaces.cmake
 usr/share/goby/interface
